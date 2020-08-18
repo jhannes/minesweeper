@@ -21,11 +21,22 @@ public class MainTest {
         assertEquals("000", displayBoard("..."));
     }
 
+    @Test
+    void itShouldDisplayMoreRows() {
+        assertEquals("000\n000", displayBoard("...\n..."));
+    }
+
     private String displayBoard(String s) {
-        String board = "*";
-        if(s.equals(".")) {
-            board = "0";
+        String board = "";
+
+        for (int i = 0; i < s.length(); i++) {
+            if (s.charAt(i) == '*') {
+                board += "*";
+            } else {
+                board += "0";
+            }
         }
+
         return board;
     }
 }
