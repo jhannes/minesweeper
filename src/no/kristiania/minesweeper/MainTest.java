@@ -11,7 +11,12 @@ public class MainTest {
         assertEquals("*", displayBoard("*"));
     }
 
+    @Test
+    void itShouldDisplayEmptyCell() {
+        assertEquals("0", displayBoard("."));
+    }
+
     private String displayBoard(String s) {
-        return null;
+        return "*";
     }
 }
