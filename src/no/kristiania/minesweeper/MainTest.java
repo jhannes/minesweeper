@@ -1,7 +1,17 @@
 package no.kristiania.minesweeper;
 
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 public class MainTest {
-    public static void main(String[] args) {
-        System.out.println("Hello World!");
+
+    @Test
+    void itShouldDisplayMine() {
+        assertEquals("*", displayBoard("*"));
+    }
+
+    private String displayBoard(String s) {
+        return null;
     }
 }
