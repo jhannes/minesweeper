@@ -16,7 +16,16 @@ public class MainTest {
         assertEquals("0", displayBoard("."));
     }
 
+    @Test
+    void itShouldDisplayEmptyCells() {
+        assertEquals("000", displayBoard("..."));
+    }
+
     private String displayBoard(String s) {
-        return "*";
+        String board = "*";
+        if(s.equals(".")) {
+            board = "0";
+        }
+        return board;
     }
 }
